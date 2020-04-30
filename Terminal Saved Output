@@ -1,0 +1,431 @@
+
+bash-3.2$ brew install git-flow-avh
+==> Installing dependencies for git-flow-avh: gnu-getopt
+==> Installing git-flow-avh dependency: gnu-getopt
+==> Downloading https://homebrew.bintray.com/bottles/gnu-getopt-2.35.1.catalina.
+######################################################################## 100.0%
+==> Pouring gnu-getopt-2.35.1.catalina.bottle.tar.gz
+==> Caveats
+gnu-getopt is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have gnu-getopt first in your PATH run:
+  echo 'export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"' >> ~/.bash_profile
+
+
+Bash completion has been installed to:
+  /usr/local/opt/gnu-getopt/etc/bash_completion.d
+==> Summary
+🍺  /usr/local/Cellar/gnu-getopt/2.35.1: 10 files, 163.9KB
+==> Installing git-flow-avh
+==> Downloading https://homebrew.bintray.com/bottles/git-flow-avh-1.12.3.catalin
+######################################################################## 100.0%
+==> Pouring git-flow-avh-1.12.3.catalina.bottle.tar.gz
+==> Caveats
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+zsh functions have been installed to:
+  /usr/local/share/zsh/site-functions
+==> Summary
+🍺  /usr/local/Cellar/git-flow-avh/1.12.3: 65 files, 333.6KB
+==> Caveats
+==> gnu-getopt
+gnu-getopt is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have gnu-getopt first in your PATH run:
+  echo 'export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"' >> ~/.bash_profile
+
+
+Bash completion has been installed to:
+  /usr/local/opt/gnu-getopt/etc/bash_completion.d
+==> git-flow-avh
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+zsh functions have been installed to:
+  /usr/local/share/zsh/site-functions
+bash-3.2$ port install git-flow-avh
+bash: port: command not found
+bash-3.2$ port install git-flow-avh
+bash: port: command not found
+bash-3.2$  /usr/local/etc/bash_completion.d
+bash: /usr/local/etc/bash_completion.d: is a directory
+bash-3.2$ port install git-flow-avh
+bash: port: command not found
+bash-3.2$ git clone --recursive git@github.com:KellyLin-MD/gitflow.git
+Cloning into 'gitflow'...
+The authenticity of host 'github.com (13.237.44.5)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,13.237.44.5' (RSA) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+bash-3.2$ git flow init
+
+Which branch should be used for bringing forth production releases?
+   - KellyLin-MD
+   - master
+Branch name for production releases: [master] 
+
+Which branch should be used for integration of the "next release"?
+   - KellyLin-MD
+Branch name for "next release" development: [] develop
+Fatal: Local branch 'develop' does not exist.
+bash-3.2$ git flow init
+
+Which branch should be used for integration of the "next release"?
+   - KellyLin-MD
+Branch name for "next release" development: [] 
+Fatal: Missing branch name
+bash-3.2$ port install git-flow
+bash: port: command not found
+bash-3.2$ wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/r
+aw/develop/contrib/gitflow-installer.sh | sudo bash
+bash: wget: command not found
+Password:
+bash-3.2$ curl -L -O https://raw.github.com/nvie/gitflow/develop/contrib/gitflo
+w-installer.sh
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100  2145  100  2145    0     0   1429      0  0:00:01  0:00:01 --:--:-- 10214
+bash-3.2$ sudo bash gitflow-installer.sh
+### gitflow no-make installer ###
+Installing git-flow to /usr/local/bin
+Cloning repo from GitHub to gitflow
+Cloning into 'gitflow'...
+warning: redirecting to https://github.com/nvie/gitflow.git/
+remote: Enumerating objects: 1407, done.
+remote: Total 1407 (delta 0), reused 0 (delta 0), pack-reused 1407
+Receiving objects: 100% (1407/1407), 484.34 KiB | 647.00 KiB/s, done.
+Resolving deltas: 100% (796/796), done.
+Updating submodules
+Submodule 'shFlags' (git://github.com/nvie/shFlags.git) registered for path 'shFlags'
+Cloning into '/Users/k/git_practice/gitflow/shFlags'...
+Submodule path 'shFlags': checked out '2fb06af13de884e9680f14a00c82e52a67c867f1'
+install: gitflow/git-flow -> /usr/local/bin/git-flow
+install: gitflow/git-flow-init -> /usr/local/bin/git-flow-init
+install: gitflow/git-flow-feature -> /usr/local/bin/git-flow-feature
+install: gitflow/git-flow-hotfix -> /usr/local/bin/git-flow-hotfix
+install: gitflow/git-flow-release -> /usr/local/bin/git-flow-release
+install: gitflow/git-flow-support -> /usr/local/bin/git-flow-support
+install: gitflow/git-flow-version -> /usr/local/bin/git-flow-version
+install: gitflow/gitflow-common -> /usr/local/bin/gitflow-common
+install: gitflow/gitflow-shFlags -> /usr/local/bin/gitflow-shFlags
+bash-3.2$ git flow init [-d]
+Unknown subcommand: '[-d]'
+usage: git flow init [-fd]
+bash-3.2$ git flow feature
+fatal: Not a gitflow-enabled repo yet. Please run "git flow init" first.
+bash-3.2$ git flow init
+
+Which branch should be used for integration of the "next release"?
+   - KellyLin-MD
+Branch name for "next release" development: [develop] 
+
+How to name your supporting branch prefixes?
+Feature branches? [feature/] 
+Release branches? [release/] 
+Hotfix branches? [hotfix/] 
+Support branches? [support/] 
+Version tag prefix? [] 
+bash-3.2$ git flow feature start MyBranch
+Switched to a new branch 'feature/MyBranch'
+
+Summary of actions:
+- A new branch 'feature/MyBranch' was created, based on 'develop'
+- You are now on branch 'feature/MyBranch'
+
+Now, start committing on your feature. When done, use:
+
+     git flow feature finish MyBranch
+
+bash-3.2$ git flow feature finish MyBranch
+Switched to branch 'develop'
+Already up to date.
+Deleted branch feature/MyBranch (was 9eefbcc).
+
+Summary of actions:
+- The feature branch 'feature/MyBranch' was merged into 'develop'
+- Feature branch 'feature/MyBranch' has been removed
+- You are now on branch 'develop'
+
+bash-3.2$ git flow feature publish MyBranch
+No branch matches prefix 'MyBranch'
+bash-3.2$ git flow feature publish MyBranch
+No branch matches prefix 'MyBranch'
+bash-3.2$ git flow feature publish MYFEATURE
+No branch matches prefix 'MYFEATURE'
+bash-3.2$ git flow release start RELEASE[BASE]
+fatal: 'release/RELEASE[BASE]' is not a valid branch name.
+
+Summary of actions:
+- A new branch 'release/RELEASE[BASE]' was created, based on 'develop'
+- You are now on branch 'release/RELEASE[BASE]'
+
+Follow-up actions:
+- Bump the version number now!
+- Start committing last-minute fixes in preparing your release
+- When done, run:
+
+     git flow release finish 'RELEASE[BASE]'
+
+bash-3.2$ git flow release publish RELEASE
+Branch 'release/RELEASE' does not exist and is required.
+bash-3.2$ git flow release finish RELEASE
+Branch 'release/RELEASE' does not exist and is required.
+bash-3.2$ git flow hotfix start VERSION[BASENAME]
+fatal: 'hotfix/VERSION[BASENAME]' is not a valid branch name.
+
+Summary of actions:
+- A new branch 'hotfix/VERSION[BASENAME]' was created, based on 'master'
+- You are now on branch 'hotfix/VERSION[BASENAME]'
+
+Follow-up actions:
+- Bump the version number now!
+- Start committing your hot fixes
+- When done, run:
+
+     git flow hotfix finish 'VERSION[BASENAME]'
+
+bash-3.2$ git flow hotfix finish VERSION
+Branch 'hotfix/VERSION' does not exist and is required.
+bash-3.2$ git add test.txt
+fatal: pathspec 'test.txt' did not match any files
+bash-3.2$ git branch develop
+fatal: A branch named 'develop' already exists.
+bash-3.2$ git push -u origin develop
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/KellyLin-MD/git_practice/pull/new/develop
+remote: 
+To https://github.com/KellyLin-MD/git_practice.git
+ * [new branch]      develop -> develop
+Branch 'develop' set up to track remote branch 'develop' from 'origin'.
+bash-3.2$ git checkout -b some-feature develop
+Switched to a new branch 'some-feature'
+bash-3.2$ git push -u origin some-feature
+Total 0 (delta 0), reused 0 (delta 0)
+gremote: 
+remote: Create a pull request for 'some-feature' on GitHub by visiting:
+remote:      https://github.com/KellyLin-MD/git_practice/pull/new/some-feature
+remote: 
+To https://github.com/KellyLin-MD/git_practice.git
+ * [new branch]      some-feature -> some-feature
+Branch 'some-feature' set up to track remote branch 'some-feature' from 'origin'.
+bash-3.2$ git status
+On branch some-feature
+Your branch is up to date with 'origin/some-feature'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	gitflow-installer.sh
+	gitflow/
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$ git add text-file
+fatal: pathspec 'text-file' did not match any files
+bash-3.2$ git add some-file
+fatal: pathspec 'some-file' did not match any files
+bash-3.2$ gitflow/add some-file
+bash: gitflow/add: No such file or directory
+bash-3.2$ git add some-file
+fatal: pathspec 'some-file' did not match any files
+bash-3.2$ echo TestBranchFile > Test.txt
+bash-3.2$ git add Test.txt
+bash-3.2$ git commit
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch some-feature
+# Your branch is up to date with 'origin/some-feature'.
+#
+# Changes to be committed:
+#  (use "git reset HEAD some-feature" to unstage)
+#  modified :Test.txt
+  "Added T1 tag"
+
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+".git/COMMIT_EDITMSG" 12L, 338C written
+[some-feature 197ff98]   "Added T1 tag"
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Test.txt
+bash-3.2$ git pull origin develop
+From https://github.com/KellyLin-MD/git_practice
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+bash-3.2$ git checkout develop
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+bash-3.2$ git merge --no-ff some-feature
+
+Test Branch GitFlow Test Merge branch 'some-feature' into develop
+# Test Branch 
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+".git/MERGE_MSG" 7L, 307C written
+Merge made by the 'recursive' strategy.
+ Test.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Test.txt
+bash-3.2$ git push origin develop
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 419 bytes | 419.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/KellyLin-MD/git_practice.git
+   9eefbcc..3e5a802  develop -> develop
+bash-3.2$ git branch -d some-feature
+warning: not deleting branch 'some-feature' that is not yet merged to
+         'refs/remotes/origin/some-feature', even though it is merged to HEAD.
+error: The branch 'some-feature' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D some-feature'.
+bash-3.2$ git checkout -b release-0.1.0 develop
+Switched to a new branch 'release-0.1.0'
+bash-3.2$ #Optional: Bump version number,commit
+bash-3.2$ #Prepare release.commit
+bash-3.2$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+bash-3.2$ merge --no-ff release-0.1.0
+bash: merge: command not found
+bash-3.2$ git push origin --delete some-feature
+To https://github.com/KellyLin-MD/git_practice.git
+ - [deleted]         some-feature
+bash-3.2$ git checkout -b release-0.1.0 develop
+fatal: A branch named 'release-0.1.0' already exists.
+bash-3.2$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+bash-3.2$ merge --no-ff release-0.1.0
+bash: merge: command not found
+bash-3.2$ git push
+Everything up-to-date
+bash-3.2$ checkout develop
+bash: checkout: command not found
+bash-3.2$ merge --no--ff release-0.1.0
+bash: merge: command not found
+bash-3.2$ git push
+Everything up-to-date
+bash-3.2$ git branch -d release-0.1.0
+error: The branch 'release-0.1.0' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D release-0.1.0'.
+bash-3.2$ git branch -D release-0.1.0
+Deleted branch release-0.1.0 (was 3e5a802).
+bash-3.2$ git tag -a v0.1.0 master
+
+Merge release
+# 
+# Write a message for tag:
+#   v0.1.0
+# Lines starting with '#' will be ignored.
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+".git/TAG_EDITMSG" 5L, 97C written
+bash-3.2$ git push--tags
+git: 'push--tags' is not a git command. See 'git --help'.
+bash-3.2$ git checkout -b hotfix-0.1.1 master
+Switched to a new branch 'hotfix-0.1.1'
+bash-3.2$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+bash-3.2$ git merge --no-ff hotfix-0.1.1
+Already up to date.
+bash-3.2$ git push
+Everything up-to-date
+bash-3.2$ git checkout develop
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+bash-3.2$ git merge --no-ff hotfix-o.1.1
+merge: hotfix-o.1.1 - not something we can merge
+bash-3.2$ git push
+Everything up-to-date
+bash-3.2$ git branch -d hotfix-0.1.1
+Deleted branch hotfix-0.1.1 (was 9eefbcc).
+bash-3.2$ git tag -a v0.1.1 master
+
+Hotfix Merge
+# 
+# Write a message for tag:
+#   v0.1.1
+# Lines starting with '#' will be ignored.
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+".git/TAG_EDITMSG" 5L, 96C written
+bash-3.2$ git push-tags
+git: 'push-tags' is not a git command. See 'git --help'.
+bash-3.2$ 
